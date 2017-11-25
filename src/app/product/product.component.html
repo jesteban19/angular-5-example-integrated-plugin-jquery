@@ -1,0 +1,9 @@
+<div class="mainContainer">
+  <p>List of products to be displayed here</p>
+  <ul class="products">
+    <li *ngFor="let prod of products" [class.selected]="prod === selectedProd">
+      <span class="badge">{{prod.id}}</span>
+      <span>{{prod.name}}</span>
+    </li>
+  </ul>
+</div>
