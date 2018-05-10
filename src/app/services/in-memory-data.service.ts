@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
+import { InMemoryDbService } from 'angular-in-memory-web-api';
 
-@Injectable()
-export class InMemoryDataService {
+export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     let products = [
       { id: 11, name: 'Lenovo' },
@@ -15,6 +15,4 @@ export class InMemoryDataService {
     ];
     return { products };
   }
-  constructor() { }
-
 }
