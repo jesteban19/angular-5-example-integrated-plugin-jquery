@@ -1,22 +1,18 @@
 <div class="mainContainer">
 
- <div style="width:960px; height:384px; margin:56px auto 0 auto;">
-
   <div id="allinone_bannerRotator_classic" style="display:none;">
     <!-- IMAGES -->
     <ul class="allinone_bannerRotator_list">
-      <li [attr.data-bottom-thumb]="'http://www.responsivejqueryslider.com/images/classic/thumbs/01_classic.jpg'" [attr.data-text-id]="'#allinone_bannerRotator_photoText1'"><img src="http://www.responsivejqueryslider.com/images/classic/01_classic.jpg" alt="" /></li>
-      <li [attr.data-bottom-thumb]="'http://www.responsivejqueryslider.com/images/classic/thumbs/02_classic.jpg'" [attr.data-text-id]="'#allinone_bannerRotator_photoText2'" [attr.data-link]="'http://codecanyon.net/user/LambertGroup?ref=LambertGroup'" [attr.data-target]="'_blank'"><img src="http://www.responsivejqueryslider.com/images/classic/02_classic.jpg" alt="" /></li>
-      <li [attr.data-bottom-thumb]="'http://www.responsivejqueryslider.com/images/classic/thumbs/03_classic.jpg'" [attr.data-text-id]="'#allinone_bannerRotator_photoText3'"><img src="http://www.responsivejqueryslider.com/images/classic/03_classic.jpg" alt="" /></li>
-      <li [attr.data-bottom-thumb]="'http://www.responsivejqueryslider.com/images/classic/thumbs/04_classic.jpg'" [attr.data-text-id]="'#allinone_bannerRotator_photoText4'" [attr.data-link]="'http://codecanyon.net/user/LambertGroup?ref=LambertGroup'"><img src="http://www.responsivejqueryslider.com/images/classic/04_classic.jpg" alt="" /></li>
-      <li [attr.data-bottom-thumb]="'http://www.responsivejqueryslider.com/images/classic/thumbs/05_classic.jpg'" [attr.data-text-id]="'#allinone_bannerRotator_photoText5'"><img src="http://www.responsivejqueryslider.com/images/classic/05_classic.jpg" alt="" /></li>
-    </ul> 
+      <li *ngFor="let item of images; let i = index;" [attr.data-bottom-thumb]="item.img" [attr.data-text-id]="'#content_ss_'+i"><img [src]="item.img" alt="" /></li>
+    </ul>
+
+    <!--<div [id]="'content_ss_' + i" class="allinone_bannerRotator_texts" *ngFor="let item of images; let i = index;">     
+      <div class="content-link" data-initial-top="440" data-final-top="440" data-duration="0.6" data-fade-start="0" data-delay="0.2">
+        <a class="link_btn" href="#">{{item.title}}</a>
+      </div>
+    </div>-->
     
-    
-    
-    
-    
-  </div>  
+
 
 </div>
 
